@@ -1477,6 +1477,7 @@ self.C3_ExpressionFuncs = [
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => Math.round((15 * ((843 - C3.clamp(f0(), 478, 843)) / 206.5)));
 		},
+		() => 90,
 		p => {
 			const v0 = p._GetNode(0).GetVar();
 			const f1 = p._GetNode(1).GetBoundMethod();
@@ -1544,7 +1545,6 @@ self.C3_ExpressionFuncs = [
 			const f3 = p._GetNode(3).GetBoundMethod();
 			return () => f0(90, (v1.GetValue() + (v2.GetValue() * f3())));
 		},
-		() => 90,
 		p => {
 			const v0 = p._GetNode(0).GetVar();
 			return () => (Math.round(((v0.GetValue() - 30) * 8.5)) % 241);
@@ -1553,35 +1553,25 @@ self.C3_ExpressionFuncs = [
 			const v0 = p._GetNode(0).GetVar();
 			return () => ((241 - (Math.round(((v0.GetValue() - 30) * 14)) % 241)) % 241);
 		},
-		p => {
-			const v0 = p._GetNode(0).GetVar();
-			const f1 = p._GetNode(1).GetBoundMethod();
-			const f2 = p._GetNode(2).GetBoundMethod();
-			const v3 = p._GetNode(3).GetVar();
-			return () => (800 + ((1 - v0.GetValue()) * f1(60, (f2(0, (v3.GetValue() - 30)) * 10))));
-		},
+		() => 800,
 		() => 646.5,
-		p => {
-			const v0 = p._GetNode(0).GetVar();
-			const f1 = p._GetNode(1).GetBoundMethod();
-			const f2 = p._GetNode(2).GetBoundMethod();
-			const v3 = p._GetNode(3).GetVar();
-			return () => (638.5 + ((1 - v0.GetValue()) * f1(60, (f2(0, (v3.GetValue() - 30)) * 10))));
-		},
+		() => 638.5,
 		() => 878.5,
+		() => 961,
 		p => {
-			const v0 = p._GetNode(0).GetVar();
+			const f0 = p._GetNode(0).GetBoundMethod();
 			const f1 = p._GetNode(1).GetBoundMethod();
-			const f2 = p._GetNode(2).GetBoundMethod();
-			const v3 = p._GetNode(3).GetVar();
-			return () => (961 + ((1 - v0.GetValue()) * f1(60, (f2(0, (v3.GetValue() - 30)) * 10))));
+			const v2 = p._GetNode(2).GetVar();
+			return () => (955 + f0(110, (f1(0, (v2.GetValue() - 30)) * 4)));
 		},
-		() => 955,
 		() => 833.5,
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			const v1 = p._GetNode(1).GetVar();
-			return () => (1440 - ((30 - f0(v1.GetValue(), 30)) * (206 / 30)));
+			const f2 = p._GetNode(2).GetBoundMethod();
+			const f3 = p._GetNode(3).GetBoundMethod();
+			const v4 = p._GetNode(4).GetVar();
+			return () => ((1440 - ((30 - f0(v1.GetValue(), 30)) * (206 / 30))) + f2(110, (f3(0, (v4.GetValue() - 30)) * 4)));
 		},
 		() => 835,
 		p => {
